@@ -1,0 +1,99 @@
+.nav-items a.nav-link {
+  margin-right: 30px; /* Adjust the value as needed */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+/* Footer.css */
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+
+.footer-wrapper .text-center {
+  margin-top: auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 5px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(100% - 20px);
+  }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+}
+
+/* Add this CSS to your existing styles or a separate CSS file */
+.enlarged-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* Adjust this value as needed */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styling for the modal */
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.modal {
+  display: flex !important;
+  align-items: center;
+}
+
+.modal-dialog {
+  margin: auto;
+  max-width: 90vw;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header .btn-close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: #000;
+  opacity: 0.5;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -15,10 +15,10 @@ export default function Footer() {
           </div>
           <div>
             <a href='' className='me-4 text-reset'>
-              <FontAwesomeIcon icon={faFacebookF} size="1.75x"/>
+              <FontAwesomeIcon icon={faFacebookF} size="2x"/>
             </a>
             <a href='' className='me-4 text-reset'>
-              <FontAwesomeIcon icon={faInstagram} size="1.75x"/>
+              <FontAwesomeIcon icon={faInstagram} size="2x"/>
             </a>
           </div>
         </section>

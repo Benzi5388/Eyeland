@@ -21,7 +21,7 @@ function HomePage() {
   return (
     <>
       {isLoading ? (
-        <div class="loader-container">
+        <div className ="loader-container">
           <Lottie animationData={loader} />
         </div>
       ) : (

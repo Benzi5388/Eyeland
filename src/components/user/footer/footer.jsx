@@ -3,7 +3,7 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGem, faHome, faEnvelope, faPhone, faPrint, faGlasses } from '@fortawesome/free-solid-svg-icons';
-import '../App.css';
+import './footer.css';
 
 export default function Footer() {
   return (

@@ -1,0 +1,23 @@
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-top: 20px;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 0 calc(100% - 20px);
+    }
+}
+
+.price-label  {
+  font-weight: bold;
+}

@@ -1,48 +1,4 @@
-.nav-items a.nav-link {
-  margin-right: 30px; /* Adjust the value as needed */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
-}
 
-/* Footer.css */
-
-.footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-}
-
-
-.footer-wrapper .text-center {
-  margin-top: auto;
-}
-
-.card-container {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 0px;
-  margin-right: 0px;
-}
-
-.card {
-  flex: 0 0 calc(33.33% - 20px);
-  margin-top: 20px;
-  margin-right: 0px;
-  padding-right: 0px;
-}
-
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 calc(100% - 20px);
-  }
-}
-
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
-}
 
 
 

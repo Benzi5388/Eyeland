@@ -5,14 +5,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'; // Import the Link component
-import '../App.css';
+import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart,  faUser, faHeart, faListAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 
 
-function NavBar() {
+function Header() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary nav-items" >
       <Container fluid>
@@ -72,4 +72,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Header;

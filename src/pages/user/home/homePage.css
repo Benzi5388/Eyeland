@@ -1,0 +1,9 @@
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+  }
+  
+  

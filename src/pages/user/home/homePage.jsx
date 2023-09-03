@@ -1,11 +1,12 @@
 // homePage.jsx
 import React, { useState, useEffect } from 'react';
-import NavBar from '../components/navbar';
-import Footer from '../components/footer';
-import Banner from '../components/banner';
-import Cards from '../components/cards';
+import Header from '../../../components/user/header/header';
+import Footer from '../../../components/user/footer/footer';
+import Banner from '../../../components/user/banner/banner';
+import Cards from '../../../components/user/cards/cards';
 import Lottie from "lottie-react";
-import loader from '../assets/loader.json'
+import loader from '../../../assets/loader.json'
+import './homePage.css'
 
 function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +27,7 @@ function HomePage() {
         </div>
       ) : (
         <>
-          <NavBar />
+          <Header />
           <Banner />
           <Cards />
           <Footer />

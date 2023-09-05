@@ -6,7 +6,7 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from '../src/Redux/store.js';
-import { ToastContainer } from 'react-toastify';
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -14,7 +14,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <PersistGate loading={null} persistor={persistor}>
         <App />
       </PersistGate>
-      <ToastContainer />
     </Provider>
   </React.StrictMode>,
 );

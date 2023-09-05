@@ -8,13 +8,21 @@ import { Link } from 'react-router-dom'; // Import the Link component
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart,  faUser, faHeart, faListAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-
-
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
+import {signout} from '../../../Redux/authSlice'
 
 
 function Header() {
+  const user = useSelector((state)=>state.user)
+  const dispatch = useDispatch();
+
+  const handleSignOut = () => {
+    console.log("handle signout called");
+    dispatch(signout());
+  };
   return (
-    <Navbar expand="lg" className="bg-body-tertiary nav-items" >
+    <Navbar expand="lg" className="bg-body-tertiary nav-items">
       <Container fluid>
         <Navbar.Brand>
           <Link to="/">
@@ -30,37 +38,42 @@ function Header() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Link to="/action1" className="nav-link">
-              Hello
+            <Link to="/" className="nav-link">
+               Hello <span className="bold-user">{user}</span>
             </Link>
-            <NavDropdown title="Me" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/action3">
-                <FontAwesomeIcon icon={faUser} />&nbsp;
-                Profile
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/action4">
-              <FontAwesomeIcon icon={faHeart} />&nbsp;
-                Wish List
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/action5">
-              <FontAwesomeIcon icon={faListAlt} />&nbsp;
-                Orders
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Link to="/action2" className="nav-link">
-            <FontAwesomeIcon icon={faShoppingCart} />&nbsp;
-              Cart
-            </Link>
-            <Link to="/action2" className="nav-link">
-            <FontAwesomeIcon icon={faSignOutAlt} />&nbsp;
-              Sign In
-            </Link>
+            {user ? (
+              <NavDropdown title="Me" id="navbarScrollingDropdown">
+                <NavDropdown.Item as={Link} to="/profile">
+                  <FontAwesomeIcon icon={faUser} />&nbsp; Profile
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/wishlist">
+                  <FontAwesomeIcon icon={faHeart} />&nbsp; Wish List
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item as={Link} to="/orders">
+                  <FontAwesomeIcon icon={faListAlt} />&nbsp; Orders
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : null}
+            {user ? (
+              <>
+              <Link to="/cart" className="nav-link"  onClick={handleSignOut} >
+              <FontAwesomeIcon icon={faShoppingCart}/>&nbsp; Cart
+              </Link>
+              <Link to="/signin" className="nav-link"  onClick={handleSignOut} >
+                <FontAwesomeIcon icon={faSignOutAlt}/>&nbsp; Sign Out
+              </Link>
+              </>
+            ) : (
+              <Link to="/signin" className="nav-link">
+                <FontAwesomeIcon icon={faSignOutAlt} />&nbsp; Sign In
+              </Link>
+            )}
           </Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="What r u lookin for?"
+              placeholder="What are you looking for?"
               className="me-2"
               aria-label="Search"
             />

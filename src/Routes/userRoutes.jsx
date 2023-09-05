@@ -4,7 +4,7 @@ import HomePage from '../pages/user/home/homePage.jsx';
 import Register from '../pages/user/resgister/register.jsx';
 import SignIn from '../pages/user/login/login.jsx';
 import VerifyOtp from '../pages/user/verifyOtp/verifyOtp.jsx';
-import PageNotFound from '../components/user/404/notFound.js';
+import PageNotFound from '../pages/404/notFound.jsx';
 
 const UserRoutes = () => {
     return (
